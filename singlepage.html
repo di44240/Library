@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Harry Potter and the Goblet of Fire </title>
+        <link rel = "stylesheet" href="css/book.css">
+        <link rel="icon" href="img/logo.png">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">        
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="./img/logo.png" width="100px">
+                    </div>
+                    
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="books.html">Books</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="account.html">Sign In</a></li>
+                        </ul>
+                    </nav>
+                    <img src="./img/menu-icon.jpg" class="menu-icon" onclick="menutoggle()">
+                </div>
+            </div>
+        </div>
+<!---single product page------------------->
+        <div class="small-container single-product">
+            <div class="row">
+                <div class="col-2">
+                    <img src="./img/books/hp.jpg" width="300px" height="400px" id="ProductImg">
+                
+                    <div class="small-img-row">
+                    
+                        <div class="small-img-col">
+                            <img src="./img/books/hp.jpg" width="100%" class="small-img">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="./img/books/9.jpg" width="100%" class="small-img">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="./img/books/k.jpg" width="100%" class="small-img">
+                        </div>
+                </div>
+                </div>
+                <div class="col-2">
+                        <p>Home/Book</p>
+                        <h1>Harry Potter </h1>
+                        <h4>$10.00</h4>
+                    <select>
+                        <option>Select Size</option>
+                        <option>Used</option>
+                        <option>New </option>
+                    </select>
+                    <input type="number" value="1">
+                    <a href="" class="btn">Add to Cart</a>
+                    <h3>Product Details <i class="fa fa-indent"></i></h3>
+                    <br>
+                    <p>Give yourself an adventure journey.</p>
+            </div>
+        </div>
+    </div>
+        
+
+<!----Feature Books------------>
+<div class="small-container">
+    <h2 class="title">Features Books</h2>
+    <div class="row">
+        <div class="col-4">
+            <a href="singlepage1.html"><img src="./img/books/pride_and_prejudice_book_cover_by_fourblackbirds-d533108.png">
+            <h4>Pride and Prejudice by Jane Austen</h4></a>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$5.00</p>
+        </div>
+        <div class="col-4">
+            <img src="./img/books/9780147514011.jpg">
+            <h4>Little Women by Louisa May Cllot</h4>
+            <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            </div>
+            <p>$5.00</p>
+        </div>
+        <div class="col-4">
+            <img src="./img/books/Penguin-2.jpg">
+            <h4>The Great Gatsby by Fscott Fitzgerald</h4>
+            <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            </div>
+            <p>$5.00</p>
+        </div>
+    </div>
+    <!--------footer------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and IoS mobile phone</p>
+                <div class="app-logo">
+                    <img src="./img/pngwing.com (1).png">
+                    <img src="./img/pngwing.com.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="./img/logo.png">
+                <p>Our Purpose is to sustainably make the <br> pleasure 
+                    and benefits of books</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Cuopons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Community</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2021</p>
+    </div>
+</div>
+<!---js for toggle menu-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if(MenuItems.style.maxHeight == "0px") 
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+             else
+            {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <!---------JS for product gallery-->
+    <script>
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementsByClassName("small-img");
+
+        SmallImg[0].onclick = function()
+        {
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function()
+        {
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function()
+        {
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function()
+        {
+            ProductImg.src = SmallImg[3].src;
+        }
+    </script>
+</body>
+</html>
