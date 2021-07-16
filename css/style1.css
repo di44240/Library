@@ -373,8 +373,6 @@ form a{
         width: 100%;
         overflow: hidden;
         transition: max-height 0.5s;
-        padding-top: 50px;
-       ;
     }
     nav ul li  {
         display: block;
