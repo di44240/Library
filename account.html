@@ -44,21 +44,36 @@
                             </div>
 
 
-                            <form id="LoginForm" method="POST" >
-                                <input id="usernameinput" name="username" type="text"  placeholder="Username">
-                                <input id="passwordinput" name="password" type="password" placeholder="Password">
-                                <button type="submit" name="login" class="btn"><a href="dashboard.html">Log In</button></a>
-                                <a href="">Forgot Password</a>
+                            <form name="myForm" id="LoginForm" method="post">
+                                <p>Username</p>
+                                <input type="text" size="20" id="inputUsername" name="Uname" class="inputText" required placeholder="Enter Your Username">
+                                <div id="invalidUsername" style="color:red; visibility:hidden;">Please write your username correctly!</div>
+                                
+                                <p>Password</p>
+                                <input type="password" size="20" id="inputPassword" name="Pass" class="inputText" required placeholder="Enter Your Password">
+                                <div id="invalidPassword" style="color:red; visibility:hidden;">Please write your password!</div>
+                                <input type="button" class="btn" name="log" id="logButton" value="Login" onclick="myFunction()">
                             </form>
 
-                            <form id="RegForm">
-                                <input type="text" required placeholder="First Name">
-                                <input type="text" required placeholder="Last Name">
-                                <input type="text" required placeholder="Number Phone">
-                                <input type="text" required placeholder="Username">
-                                <input type="email" required placeholder="Email">
-                                <input type="password" required placeholder="Password">
-                                <button type="submit" class="btn">Register</button>
+                            <form name="myRegForm" id="RegForm" method="post">
+                                <input type="text" name="firstname" id="lastname" class="inputText" required placeholder="First Name">
+                                
+                                <input type="text" name="lastname" id="lastName" class="inputText" required placeholder="Last Name">
+                                
+                        
+                                <input type="text" name="number" id="number" class="inputText" placeholder="Number Phone">
+                               
+                        
+                                <input type="email" name="email" id="email" class="inputText" required placeholder="Email">
+                               
+                        
+                                
+                                <input type="text" name="username" id="username" class="inputText" required placeholder="Username">
+                                
+                                <input type="password" name="password" id="password" class="inputText" required placeholder="Password">
+                                
+                        
+                                <input type="button" class="btn" name="reg" id="regButton" value="Register" onclick="myFunction1()">
                             </form>
                         </div>
                     </div>
@@ -142,6 +157,34 @@
             Indicator.style.transform = "translateX(100px)";
         }
        
+    </script>
+<!---js for log in-->
+    <script>
+        function myFunction() {
+            var un = document.forms["myForm"]["Uname"].value;
+            
+            var pw = document.forms["myForm"]["Pass"].value;
+        if (un=="zijadinikr" && pw=="123456789"){
+            window.location.href="dashboard.html";
+        }
+        else{
+            alert("Invalid Username and Password");
+        }
+        }
+    </script>
+
+    <script>
+        function myFunction1() {
+            var em = document.forms["myRegForm"]["email"].value;
+            var un1 = document.forms["myRegForm"]["username"].value;
+            var pw1 = document.forms["myRegForm"]["password"].value;
+        if (em=="student@gmail.com" &&  un1=="student99" && pw1=="1234"){
+            window.location.href="home.html";
+        }
+        else{
+            alert("Invalid Username and Password");
+        }
+        }
     </script>
 </body>
 </html>

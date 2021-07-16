@@ -54,6 +54,9 @@ p{
   border-radius: 30px;
   transition: background 0.5s;
 }
+.btn a{
+ color: black;
+}
 .btn:hover{
   background: #0d0c41;
 }
